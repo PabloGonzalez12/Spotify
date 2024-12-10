@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="html,css,web,lenguajemarca">
+    <meta name="author" content="Pablo">
+    <meta name="generator" content="visualstudio">
+    <meta name="application-name" content="Spotify">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/script.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <main>
+        <aside>
+            <div id="filter-container">
+                <div id="circles">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                
+                <details id="filter-dropdown">
+                    <summary class="filter">Filtros</summary>
+                    <p id="todos">Todos</p>
+                    <p id="favoritos">Favoritos</p>
+                </details>
+            </div>
+    
+            <div id="img-container">
+                
+            </div>
+        </aside>
+    
+        <section>
+            <header>
+                <div class="header-top">
+                    <div class="search">
+                        <i class='bx bx-search-alt' ></i>
+                        <input type="search" name="search" placeholder="Search" id="search">
+                    </div>
+
+                    <div class="user-profile">
+                        <img src="./src/img/user.png" alt="imagen_usuario">
+                        <span>Pablo</span>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <div>
+                        <h1>Music</h1>
+                    </div>
+                    <div class="header-right">
+                        <button type="button" id="play-pause">
+                            PLAY
+                        </button>
+                        <i class='bx bxs-add-to-queue' ></i>
+                    </div>
+                </div>
+            </header>
+
+            <section id="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">TITULO</th>
+                            <th scope="col">ARTISTA</th>
+                            <th scope="col"><i class='bx bx-time-five' style='color:#ffffff'  ></i></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+            
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer-left">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="footer-center">
+            <div class="footer-icons">
+                <span><i id="repeat" class='bx bx-repeat'></i></span>
+                <span><i id="prev" class='bx bx-skip-previous'></i></span>
+                <span><i class='bx bx-play-circle' ></i></span>
+                <span><i id="next" class='bx bx-skip-next' ></i></span>
+                <span><i id="shuffle" class='bx bx-shuffle' ></i></span>
+            </div>
+            
+            <div class="timer">
+                <span id="currentTime">0:00</span>
+                <span>
+                    <progress id="songProgressBar" max="100" value="0"></progress>
+                </span>
+                <span id="duration"></span>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <i id="volume-icon" class='bx bxs-volume-low'></i>
+            <progress id="volumeProgressBar" max="100" value="60"></progress>
+        </div>
+    </footer>
+
+    <audio src="" class="hidden" id="audio"></audio>
+
+</body>
+</html>
