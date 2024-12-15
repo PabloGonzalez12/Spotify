@@ -5,7 +5,7 @@ let cachedSongs = []; // Variable global para almacenar las canciones
 // Función para obtener canciones de la API
 async function fetchSongs() {
     try {
-        const response = await fetch('http://informatica.iesalbarregas.com:7007/songs');
+        const response = await fetch('http://informatica.iesalbarregas.com:7008/songs');
         if (!response.ok) throw new Error('Error al obtener canciones');
         const songs = await response.json();
         cachedSongs = songs; // Almacenar canciones en la variable global
@@ -32,7 +32,7 @@ async function renderSongs(songs, filter = 'all') {
 
         const playIconCell = document.createElement('td');
         playIconCell.innerHTML = `
-            <div class="icon-table-play">
+            <div class="animacion-agrandar icon-table-play">
                 <i class='bx bx-play' style='color:#ffffff'></i>
             </div>
         `;
@@ -446,7 +446,7 @@ document.querySelector(".bxs-add-to-queue").addEventListener("click", () => {
         const formData = new FormData(uploadForm);
 
         // Realizar la petición POST a la API
-        fetch("http://informatica.iesalbarregas.com:7007/upload", {
+        fetch("http://informatica.iesalbarregas.com:7008/upload", {
             method: "POST",
             body: formData,
         })
